@@ -1,0 +1,28 @@
+{
+  "name": "pec1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parcel:dev": "parcel src/index.html -p 8123 --open",
+    "parcel:build": "parcel build src/index.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
+    "clean": "rimraf dist .cache .cache-loader",
+    "dev": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean  parcel:build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel Angel Molina Martín",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-imagemin": "^4.0.2",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.0",
+    "rimraf": "^3.0.2"
+  }
+}

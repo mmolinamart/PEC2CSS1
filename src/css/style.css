@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+.row::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 15px;
+}
+
+header {
+  background: linear-gradient(to top,
+  white,
+  green);
+  color: #ffffff;
+  color: #ffffff;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+ 
+}
+header h1{
+  font-family: 'Langar', cursive;
+  font-weight: normal;
+  display: block;
+  margin: auto;
+}
+footer h1{
+  font-family: 'Langar', cursive;
+  font-weight: normal;
+}
+.row {
+  min-height: 100%;
+}
+.footer {
+  background: linear-gradient(to bottom,
+  white,
+  green);
+  color: #ffffff;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: grey;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+  background-color: darkgray;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 0.5;
+}
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 230px;
+}
+.marco{
+  position: relative;
+  width: 50%;
+  left: 25%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:rgba(0,255,0,0.5);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.textoO{
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.marco:hover .overlay{
+  bottom: 0;
+  height: 100%;
+}
+
+
+.autor {
+  color: grey;
+}
+.precio {
+  font-weight: bold;
+}
+.detalle {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: green;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+.imagen {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imagen2{
+  width: 200%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-enlarge > span {
+ position: absolute;
+ top: -9999em;
+ left: -9999em;
+}
+
+
+.container-enlarge:hover span {
+  top: 90px;
+  left: 490px;
+  width: 300px;
+  height: 180%;
+}
+
+.titulos {
+  text-align: center;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+iframe {
+  width: 100%;
+  max-width: 500px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.cat {
+  color: grey;
+}
+
+.logo {
+  max-width: 7em;
+}
+.dropbtn {
+  background-color: white;
+  color: grey;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropbtn i{
+  padding-left: 5px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color:rgba(0,0,0,0.2);
+}
+
+.dropbtn i{
+  width: 2px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 330px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.poligono{
+  max-width: 50px;
+  max-height: 50px;
+  margin-top: 20px;;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.mySlides {display: none}
+.carrusel img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.redes{
+  list-style-type: none;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  line-height: 1.5;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.clip-circle{
+  clip-path: circle(60px at center);
+  position: relative;
+  
+}
+.col-2 img{
+  width: 120px;
+}
+
+.destacados{
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+
+}
+
+.destacado{
+  margin-right: 5%;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* Para visuailzación en escritorio*/
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* Visualización en móviles */
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*='col-'] {
+    width: 100%;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+  }
+  .logo{
+    display: block;
+    margin: auto;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+  header h1{
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .logo{
+    margin-top: 15px;;
+  }
+
+ 
+  footer h1{
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .redes{
+    list-style-type: none;
+    display: block;
+    margin: auto;
+    padding-left: 20px;
+  }
+
+  .poligono{
+    display: block;
+    margin:auto;
+    padding-top: 10px;
+  }
+
+  .redes li{
+    display: inline;
+  }
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+  .textoO{
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .clip-circle{
+    display: block;
+    margin: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 35%;
+    
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imagen {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .imagen2{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .container-enlarge > span {
+   position: absolute;
+   top: -9999em;
+   left: -9999em;
+  }
+  
+  
+  .container-enlarge:hover span {
+    top: 100px;
+    left: 10px;
+    width: 300px;
+    height: 180%;
+  }
+
+  .destacados{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  
+  }
+  .overlay{
+    width: 121%;
+  }
+
+  
+
+}
