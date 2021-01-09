@@ -4,7 +4,10 @@
     <head>
         <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+         <link rel="preload" href="./css/style.css" as="style">
+         <link rel="preload" href="./js/index.js" as="script">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./img/favicon.jpg" type="image/jpg" sizes="16x16">
     </head>
 <body>
   <header>
@@ -13,7 +16,7 @@
   </header>
    <main class="row">
       <div class="col-3 menu">
-        <button onclick="myFunction()" class="dropbtn">Categorías</button>
+        <button onclick="myFunction()" class="dropbtn">Categorías: <i class="far fa-caret-square-down"></i>
         <div id="myDropdown" class="dropdown-content">
           <a href="psicologia.html">Psicología</a>
           <a href="viajes.html">Viajes</a>
